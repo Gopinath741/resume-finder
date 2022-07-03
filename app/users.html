@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Quanta Skills System</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/logo-icon.ico" />
+
+    <!-- page css -->
+    <link
+      href="assets/vendors/datatables/dataTables.bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Core css -->
+    <link href="assets/css/app.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <div class="vertical-layout">
+        <!-- Header START -->
+        <div class="header-text-dark header-nav layout-vertical">
+          <div class="header-nav-wrap">
+            <div class="header-nav-left">
+              <div class="header-nav-item desktop-toggle">
+                <div class="header-nav-item-select cursor-pointer">
+                  <i class="nav-icon feather icon-menu icon-arrow-right"></i>
+                </div>
+              </div>
+              <div class="header-nav-item mobile-toggle">
+                <div class="header-nav-item-select cursor-pointer">
+                  <i class="nav-icon feather icon-menu icon-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="header-nav-right">
+              <div class="header-nav-item">
+                <div class="dropdown header-nav-item-select nav-profile">
+                  <div
+                    class="toggle-wrapper"
+                    id="nav-profile-dropdown"
+                    data-bs-toggle="dropdown"
+                  >
+                    <div
+                      class="avatar avatar-circle avatar-image"
+                      style="width: 35px; height: 35px; line-height: 35px"
+                    >
+                      <img src="assets/images/avatars/thumb-1.jpg" alt="" />
+                    </div>
+                    <span class="fw-bold mx-1">Admin</span>
+                    <i class="feather icon-chevron-down"></i>
+                  </div>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <div class="nav-profile-header">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar avatar-circle avatar-image">
+                          <img src="assets/images/avatars/thumb-1.jpg" alt="" />
+                        </div>
+                        <div class="d-flex flex-column ms-1">
+                          <span class="fw-bold text-dark">Admin</span>
+                          <span class="font-size-sm">admin@helplena.com</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <a href="javascript:void(0)" class="dropdown-item">
+                      <div class="d-flex align-items-center">
+                        <i class="font-size-lg me-2 feather icon-user"></i>
+                        <span>Profile</span>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)" class="dropdown-item">
+                      <div class="d-flex align-items-center">
+                        <i class="font-size-lg me-2 feather icon-settings"></i>
+                        <span>Settings</span>
+                      </div>
+                    </a> -->
+                    <a href="javascript:void(0)" class="dropdown-item">
+                      <div class="d-flex align-items-center">
+                        <i class="font-size-lg me-2 feather icon-life-buoy"></i>
+                        <span>Change Password</span>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)" class="dropdown-item">
+                      <div class="d-flex align-items-center">
+                        <i class="font-size-lg me-2 feather icon-power"></i>
+                        <span>Log Out</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Header END -->
+
+        <!-- Side Nav START -->
+        <div class="side-nav vertical-menu nav-menu-light scrollable">
+          <div class="nav-logo">
+            <div class="w-100 logo">
+              <img
+                class="img-fluid"
+                src="assets/images/logo/logo.png"
+                style="max-height: 70px"
+                alt="logo"
+              />
+            </div>
+            <div class="mobile-close">
+              <i class="icon-arrow-left feather"></i>
+            </div>
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-menu-item router-link-active">
+              <a href="dashboard.html">
+                <i class="feather icon-home"></i>
+                <span class="nav-menu-item-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-group-title">MENU TITLE</li>
+            <!-- <li class="nav-menu-item">
+              <a href="">
+                <i class="feather icon-user"></i>
+                <span class="nav-menu-item-title">Candidates</span>
+              </a>
+            </li> -->
+            <!-- <li class="nav-menu-item">
+              <a href="">
+                <i class="feather icon-message-circle"></i>
+                <span class="nav-menu-item-title">Menu Item 2</span>
+              </a>
+            </li> -->
+            <li class="nav-submenu">
+              <a class="nav-submenu-title">
+                <i class="feather icon-user"></i>
+                <span>Candidates</span>
+                <i class="nav-submenu-arrow"></i>
+              </a>
+              <ul class="nav-menu menu-collapse">
+                <li class="nav-menu-item">
+                  <a href="add-resume.html">Add Resume</a>
+                </li>
+                <li class="nav-menu-item">
+                  <a href="list-resume.html">Find Resume</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-menu-item router-link-active">
+              <a href="users.html">
+                <i class="feather icon-users"></i>
+                <span class="nav-menu-item-title">Users</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Side Nav END -->
+
+        <!-- Content START -->
+        <div class="content">
+          <div class="main">
+            <div class="page-header">
+              <h4 class="page-title">Users</h4>
+            </div>
+            <!-- <form class="needs-validation" novalidate id="user-form"> -->
+              <div class="row mb-3">
+                <label for="inputUser" class="col-sm-2 col-form-label">User</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" name="inputUser" id="user-username" required/>
+                  <div class="invalid-feedback">User is required.</div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-6">
+                  <input type="password" class="form-control" name="inputPassword" required id="user-password"/>
+                  <div class="invalid-feedback">Password is required.</div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputIndustry" class="col-sm-2 col-form-label">Industry</label>
+                <div class="col-sm-6">
+                  <select name="inputIndustry" class="form-select" multiple multiselect-select-all="true" multiselect-max-items="3" required required id="user-industry">
+                    <option>Administration</option>
+                    <option>Automotive</option>
+                    <option>Aviation & Aerospace</option>
+                    <option>Chemical</option>
+                    <option>Commercial Construction</option>
+                    <option>Construction</option>
+                    <option>Cosmetics</option>
+                    <option>Costumer Support</option>
+                    <option>Designing</option>
+                    <option>Engineering</option>
+                    <option>Food & Beverages</option>
+                    <option>Hospitality</option>
+                    <option>Industrial Construction</option>
+                    <option>Information Technology</option>
+                    <option>Logistics & Transportation</option>
+                    <option>Manufacturing</option>
+                    <option>Marketing</option>
+                    <option>Packaging</option>
+                    <option>Petroleum</option>
+                    <option>Pharmaceutical</option>
+                    <option>Residential Construction</option>
+                    <option>Retail</option>
+                    <option>Safety</option>
+                    <option>Sales</option>
+                    <option>Tax & Finance</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Minimum one indsutry should be selected
+                  </div>
+                </div>
+              </div>
+              <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">Active</legend>
+                <div class="col-sm-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" value="Yes" required id="user-active"/>
+                    <label class="form-check-label ms-2" for="gridRadios1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gridRadios"
+                      id="gridRadios2"
+                      value="No"
+                      required
+                    />
+                    <label class="form-check-label ms-2" for="gridRadios2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="col-12 text-center py-3">
+                <button type="submit" class="btn btn-primary" id="user-submit">Submit</button>
+              </div>
+            <!-- </form> -->
+
+            <div class="card">
+              <div class="card-body">
+                <div>
+                  <table class="table table-hover user-list-table">
+                    <thead>
+                      <tr>
+                        <th>User</th>
+                        <th>Password</th>
+                        <th>Department</th>
+                        <th>Active</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <div class="text-dark fw-bold">
+                                Gopinath Tonduri
+                              </div>
+                              <div class="text-muted">gopinath@gmail.com</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td><span>*********</span></td>
+                        <td><span>Information Technology</span></td>
+                        <td>
+                          <div class="d-flex align-items-center text-success">
+                            <span class="badge-dot me-2 bg-success"></span>
+                            <span class="text-capitalize">yes</span>
+                          </div>
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown">
+                            <a href="#" class="px-2" data-bs-toggle="dropdown">
+                              <i class="feather icon-more-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  class="dropdown-item"
+                                >
+                                  <div class="d-flex align-items-center">
+                                    <i class="feather icon-trash-2"></i>
+                                    <span class="ms-2">Delete User</span>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <div class="text-dark fw-bold">Syed Myfooz</div>
+                              <div class="text-muted">syed@gmail.com</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td><span>*********</span></td>
+                        <td><span>Marketing</span></td>
+                        <td>
+                          <div class="d-flex align-items-center text-success">
+                            <span class="badge-dot me-2 bg-success"></span>
+                            <span class="text-capitalize">yes</span>
+                          </div>
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown">
+                            <a href="#" class="px-2" data-bs-toggle="dropdown">
+                              <i class="feather icon-more-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  class="dropdown-item"
+                                >
+                                  <div class="d-flex align-items-center">
+                                    <i class="feather icon-trash-2"></i>
+                                    <span class="ms-2">Delete User</span>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <div class="text-dark fw-bold">Abhinaya</div>
+                              <div class="text-muted">abhinaya@gmail.com</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td><span>*********</span></td>
+                        <td><span>Designing</span></td>
+                        <td>
+                          <div class="d-flex align-items-center text-danger">
+                            <span class="badge-dot me-2 bg-danger"></span>
+                            <span class="text-capitalize">no</span>
+                          </div>
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown">
+                            <a href="#" class="px-2" data-bs-toggle="dropdown">
+                              <i class="feather icon-more-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  class="dropdown-item"
+                                >
+                                  <div class="d-flex align-items-center">
+                                    <i class="feather icon-trash-2"></i>
+                                    <span class="ms-2">Delete User</span>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <div class="text-dark fw-bold">
+                                Vivekananda Nareddula
+                              </div>
+                              <div class="text-muted">
+                                vivekananda@gmail.com
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td><span>*********</span></td>
+                        <td><span>Food & Beverages</span></td>
+                        <td>
+                          <div class="d-flex align-items-center text-success">
+                            <span class="badge-dot me-2 bg-success"></span>
+                            <span class="text-capitalize">yes</span>
+                          </div>
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown">
+                            <a href="#" class="px-2" data-bs-toggle="dropdown">
+                              <i class="feather icon-more-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  class="dropdown-item"
+                                >
+                                  <div class="d-flex align-items-center">
+                                    <i class="feather icon-trash-2"></i>
+                                    <span class="ms-2">Delete User</span>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <div class="text-dark fw-bold">Pavan Kumar</div>
+                              <div class="text-muted">pavan@gmail.com</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td><span>*********</span></td>
+                        <td><span>Hospitality</span></td>
+                        <td>
+                          <div class="d-flex align-items-center text-danger">
+                            <span class="badge-dot me-2 bg-danger"></span>
+                            <span class="text-capitalize">no</span>
+                          </div>
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown">
+                            <a href="#" class="px-2" data-bs-toggle="dropdown">
+                              <i class="feather icon-more-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  class="dropdown-item"
+                                >
+                                  <div class="d-flex align-items-center">
+                                    <i class="feather icon-trash-2"></i>
+                                    <span class="ms-2">Delete User</span>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <div class="text-dark fw-bold">Ansari Sayyed</div>
+                              <div class="text-muted">ansari@gmail.com</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td><span>*********</span></td>
+                        <td><span>Residential Construction</span></td>
+                        <td>
+                          <div class="d-flex align-items-center text-success">
+                            <span class="badge-dot me-2 bg-success"></span>
+                            <span class="text-capitalize">yes</span>
+                          </div>
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown">
+                            <a href="#" class="px-2" data-bs-toggle="dropdown">
+                              <i class="feather icon-more-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  class="dropdown-item"
+                                >
+                                  <div class="d-flex align-items-center">
+                                    <i class="feather icon-trash-2"></i>
+                                    <span class="ms-2">Delete User</span>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <div class="text-dark fw-bold">Akshith Jalli</div>
+                              <div class="text-muted">akshith@gmail.com</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td><span>*********</span></td>
+                        <td><span>Information Technology</span></td>
+                        <td>
+                          <div class="d-flex align-items-center text-success">
+                            <span class="badge-dot me-2 bg-success"></span>
+                            <span class="text-capitalize">yes</span>
+                          </div>
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown">
+                            <a href="#" class="px-2" data-bs-toggle="dropdown">
+                              <i class="feather icon-more-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  class="dropdown-item"
+                                >
+                                  <div class="d-flex align-items-center">
+                                    <i class="feather icon-trash-2"></i>
+                                    <span class="ms-2">Delete User</span>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <div class="text-dark fw-bold">Vamsi Revada</div>
+                              <div class="text-muted">vamsi@gmail.com</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td><span>*********</span></td>
+                        <td><span>Engineering</span></td>
+                        <td>
+                          <div class="d-flex align-items-center text-danger">
+                            <span class="badge-dot me-2 bg-danger"></span>
+                            <span class="text-capitalize">no</span>
+                          </div>
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown">
+                            <a href="#" class="px-2" data-bs-toggle="dropdown">
+                              <i class="feather icon-more-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  class="dropdown-item"
+                                >
+                                  <div class="d-flex align-items-center">
+                                    <i class="feather icon-trash-2"></i>
+                                    <span class="ms-2">Delete User</span>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <div class="text-dark fw-bold">Chandu Naidu</div>
+                              <div class="text-muted">chandu@gmail.com</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td><span>*********</span></td>
+                        <td><span>Industrial Construction</span></td>
+                        <td>
+                          <div class="d-flex align-items-center text-success">
+                            <span class="badge-dot me-2 bg-success"></span>
+                            <span class="text-capitalize">yes</span>
+                          </div>
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown">
+                            <a href="#" class="px-2" data-bs-toggle="dropdown">
+                              <i class="feather icon-more-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  class="dropdown-item"
+                                >
+                                  <div class="d-flex align-items-center">
+                                    <i class="feather icon-trash-2"></i>
+                                    <span class="ms-2">Delete User</span>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <div class="text-dark fw-bold">
+                                Kalyan Chinnam
+                              </div>
+                              <div class="text-muted">kalyan@gmail.com</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td><span>*********</span></td>
+                        <td><span>Tax & Finance </span></td>
+                        <td>
+                          <div class="d-flex align-items-center text-danger">
+                            <span class="badge-dot me-2 bg-danger"></span>
+                            <span class="text-capitalize">no</span>
+                          </div>
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown">
+                            <a href="#" class="px-2" data-bs-toggle="dropdown">
+                              <i class="feather icon-more-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  class="dropdown-item"
+                                >
+                                  <div class="d-flex align-items-center">
+                                    <i class="feather icon-trash-2"></i>
+                                    <span class="ms-2">Delete User</span>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Footer START -->
+          <div class="footer">
+            <div class="footer-content">
+              <p class="mb-0">
+                Copyright © 2022 Quanta Consulting Services. All rights
+                reserved.
+              </p>
+              <span>
+                <a href="" class="text-gray me-3">Term &amp; Conditions</a>
+                <a href="" class="text-gray">Privacy &amp; Policy</a>
+              </span>
+            </div>
+          </div>
+          <!-- Footer End -->
+        </div>
+        <!-- Content END -->
+      </div>
+    </div>
+
+    <!-- Core Vendors JS -->
+    <script src="assets/js/vendors.min.js"></script>
+
+    <!-- page js -->
+    <script src="assets/vendors/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/vendors/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/multiselect-dropdown.js"></script>
+    <script src="assets/js/pages/user-list.js"></script>
+    <script src="assets/js/form-validation.js"></script>
+
+    <!-- Core JS -->
+    <script src="assets/js/app.min.js"></script>
+    <script src="js/users.js"></script>
+
+  </body>
+</html>

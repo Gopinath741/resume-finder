@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Quanta Skills System</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/logo-icon.ico" />
+
+    <!-- page css -->
+    <!-- <link
+      href="assets/vendors/apexcharts/dist/apexcharts.css"
+      rel="stylesheet"
+    /> -->
+
+    <!-- Core css -->
+    <link href="assets/css/app.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <div class="vertical-layout">
+        <!-- Header START -->
+        <div class="header-text-dark header-nav layout-vertical">
+          <div class="header-nav-wrap">
+            <div class="header-nav-left">
+              <div class="header-nav-item desktop-toggle">
+                <div class="header-nav-item-select cursor-pointer">
+                  <i class="nav-icon feather icon-menu icon-arrow-right"></i>
+                </div>
+              </div>
+              <div class="header-nav-item mobile-toggle">
+                <div class="header-nav-item-select cursor-pointer">
+                  <i class="nav-icon feather icon-menu icon-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="header-nav-right">
+              <div class="header-nav-item">
+                <div class="dropdown header-nav-item-select nav-profile">
+                  <div
+                    class="toggle-wrapper"
+                    id="nav-profile-dropdown"
+                    data-bs-toggle="dropdown"
+                  >
+                    <div
+                      class="avatar avatar-circle avatar-image"
+                      style="width: 35px; height: 35px; line-height: 35px"
+                    >
+                      <img src="assets/images/avatars/thumb-1.jpg" alt="" />
+                    </div>
+                    <span class="fw-bold mx-1">Admin</span>
+                    <i class="feather icon-chevron-down"></i>
+                  </div>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <div class="nav-profile-header">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar avatar-circle avatar-image">
+                          <img src="assets/images/avatars/thumb-1.jpg" alt="" />
+                        </div>
+                        <div class="d-flex flex-column ms-1">
+                          <span class="fw-bold text-dark">Admin</span>
+                          <span class="font-size-sm">admin@helplena.com</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <a href="javascript:void(0)" class="dropdown-item">
+                      <div class="d-flex align-items-center">
+                        <i class="font-size-lg me-2 feather icon-user"></i>
+                        <span>Profile</span>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)" class="dropdown-item">
+                      <div class="d-flex align-items-center">
+                        <i class="font-size-lg me-2 feather icon-settings"></i>
+                        <span>Settings</span>
+                      </div>
+                    </a> -->
+                    <a href="javascript:void(0)" class="dropdown-item">
+                      <div class="d-flex align-items-center">
+                        <i class="font-size-lg me-2 feather icon-life-buoy"></i>
+                        <span>Change Password</span>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)" class="dropdown-item">
+                      <div class="d-flex align-items-center">
+                        <i class="font-size-lg me-2 feather icon-power"></i>
+                        <span>Log Out</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Header END -->
+
+        <!-- Side Nav START -->
+        <div class="side-nav vertical-menu nav-menu-light scrollable">
+          <div class="nav-logo">
+            <div class="w-100 logo">
+              <img
+                class="img-fluid"
+                src="assets/images/logo/logo.png"
+                style="max-height: 70px"
+                alt="logo"
+              />
+            </div>
+            <div class="mobile-close">
+              <i class="icon-arrow-left feather"></i>
+            </div>
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-menu-item router-link-active">
+              <a href="dashboard.html">
+                <i class="feather icon-home"></i>
+                <span class="nav-menu-item-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-group-title">MENU TITLE</li>
+            <!-- <li class="nav-menu-item">
+              <a href="">
+                <i class="feather icon-user"></i>
+                <span class="nav-menu-item-title">Candidates</span>
+              </a>
+            </li> -->
+            <!-- <li class="nav-menu-item">
+              <a href="">
+                <i class="feather icon-message-circle"></i>
+                <span class="nav-menu-item-title">Menu Item 2</span>
+              </a>
+            </li> -->
+            <li class="nav-submenu open">
+              <a class="nav-submenu-title">
+                <i class="feather icon-user"></i>
+                <span>Candidates</span>
+                <i class="nav-submenu-arrow"></i>
+              </a>
+              <ul class="nav-menu menu-collapse" style="display: block">
+                <li class="nav-menu-item router-link-active">
+                  <a href="add-resume.html">Add Resume</a>
+                </li>
+                <li class="nav-menu-item">
+                  <a href="list-resume.html">Find Resume</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-menu-item">
+              <a href="users.html">
+                <i class="feather icon-users"></i>
+                <span class="nav-menu-item-title">Users</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Side Nav END -->
+
+        <!-- Content START -->
+        <div class="content">
+          <div class="main">
+            <div class="page-header">
+              <h4 class="page-title">Add Resume</h4>
+            </div>
+            <!-- <form class="needs-validation row g-3" novalidate> -->
+              <div class="col-md-3">
+                <label for="inputName" class="form-label"
+                  >Name <span>*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputName"
+                  name="inputName"
+                  required
+                />
+                <div class="invalid-feedback">Name is required.</div>
+              </div>
+              <div class="col-md-3">
+                <label for="inputEmail" class="form-label"
+                  >Email <span>*</span>
+                </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail"
+                  name="inputEmail"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="inputPhone" class="form-label">Phone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="inputPhone"
+                  id="inputPhone"
+                />
+              </div>
+              <div class="col-md-3">
+                <label for="inputJobTitle" class="form-label"
+                  >Job Title <span>*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputJobTitle"
+                  name="inputJobTitle"
+                  required
+                />
+                <div class="invalid-feedback">Job Title is required</div>
+              </div>
+              <div class="col-md-3">
+                <label for="inputKeywords" class="form-label"
+                  >Keywords <span>*</span></label
+                >
+                <textarea
+                  id="inputKeywords"
+                  name="inputKeywords"
+                  class="form-control"
+                  rows="03"
+                  maxlength="500"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">Keywords are required</div>
+              </div>
+              <div class="col-md-3">
+                <label for="inputIndustry" class="form-label">
+                  Industry <span>*</span>
+                </label>
+                <select
+                  id="inputIndustry"
+                  name="inputIndustry"
+                  class="form-select"
+                  multiple
+                  multiselect-select-all="true"
+                  multiselect-max-items="3"
+                  required
+                >
+                  <option>Administration</option>
+                  <option>Automotive</option>
+                  <option>Aviation & Aerospace</option>
+                  <option>Chemical</option>
+                  <option>Commercial Construction</option>
+                  <option>Construction</option>
+                  <option>Cosmetics</option>
+                  <option>Costumer Support</option>
+                  <option>Designing</option>
+                  <option>Engineering</option>
+                  <option>Food & Beverages</option>
+                  <option>Hospitality</option>
+                  <option>Industrial Construction</option>
+                  <option>Information Technology</option>
+                  <option>Logistics & Transportation</option>
+                  <option>Manufacturing</option>
+                  <option>Marketing</option>
+                  <option>Packaging</option>
+                  <option>Petroleum</option>
+                  <option>Pharmaceutical</option>
+                  <option>Residential Construction</option>
+                  <option>Retail</option>
+                  <option>Safety</option>
+                  <option>Sales</option>
+                  <option>Tax & Finance</option>
+                </select>
+                <div class="invalid-feedback">
+                  Minimum one indsutry should be selected
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="inputCountry" class="form-label"
+                  >Location <span>*</span></label
+                >
+                <div class="row">
+                  <input
+                    type="hidden"
+                    name="country"
+                    id="countryId"
+                    value="US"
+                  />
+                  <div class="col-md-6">
+                    <select
+                      class="states order-alpha form-select"
+                      name="state"
+                      id="stateId"
+                      required
+                    >
+                      <option value="">Select State</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a state.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputCity"
+                      name="inputCity"
+                      placeholder="City Name *"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please select a city name.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="inputRemark" class="form-label"
+                  >Remarks <span>*</span></label
+                >
+                <textarea
+                  id="inputRemark"
+                  name="inputRemark"
+                  class="form-control"
+                  rows="03"
+                  maxlength="200"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">Remark is required</div>
+              </div>
+
+              <div class="col-md-3">
+                <label for="inputVisaStatus" class="form-label"
+                  >Visa Status <span>*</span></label
+                >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="flexRadioDefault1"
+                    name="flexRadioDefault"
+                    value="US Citizen / Green Card"
+                    required
+                  />
+                  <label class="form-check-label ms-2" for="flexRadioDefault1">
+                    US Citizen / Green Card
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="flexRadioDefault2"
+                    name="flexRadioDefault"
+                    value="TN Visa"
+                    required
+                  />
+                  <label class="form-check-label ms-2" for="flexRadioDefault2">
+                    TN Visa
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="flexRadioDefault3"
+                    name="flexRadioDefault"
+                    value="EAD Green Card"
+                    required
+                  />
+                  <label class="form-check-label ms-2" for="flexRadioDefault3">
+                    EAD Green Card
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="flexRadioDefault4"
+                    name="flexRadioDefault"
+                    value="Others"
+                    required
+                  />
+                  <label class="form-check-label ms-2" for="flexRadioDefault4">
+                    Others
+                  </label>
+                </div>
+                <div class="invalid-feedback">
+                  Please select your visa status.
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="inputCertification" class="form-label"
+                  >License / Certification</label
+                >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="certificationOption1"
+                    name="certificationOption"
+                    value="Yes"
+                  />
+                  <label
+                    class="form-check-label ms-2"
+                    for="certificationOption1"
+                  >
+                    Yes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="certificationOption2"
+                    name="certificationOption"
+                    value="No"
+                  />
+                  <label
+                    class="form-check-label ms-2"
+                    for="certificationOption2"
+                  >
+                    No
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="inputFile" class="form-label"
+                  >Upload Resume
+                  <span>(Accepts only .doc, .docx, .pdf) *</span></label
+                >
+                <input
+                  type="file"
+                  id="inputFile"
+                  name="inputFile"
+                  class="form-control"
+                  accept=".doc,.docx,.pdf"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please attach resume in requested format
+                </div>
+              </div>
+              <div class="col-12 text-center py-3">
+                <!-- <button class="btn btn-primary" type="submit">Submit</button> -->
+                <input type="submit" value="Submit" class="btn btn-primary" id="resume-form-submit"></input>
+              </div>
+            <!-- </form> -->
+          </div>
+          <!-- Footer START -->
+          <div class="footer">
+            <div class="footer-content">
+              <p class="mb-0">
+                Copyright © 2022 Quanta Consulting Services. All rights
+                reserved.
+              </p>
+              <span>
+                <a href="" class="text-gray me-3">Term &amp; Conditions</a>
+                <a href="" class="text-gray">Privacy &amp; Policy</a>
+              </span>
+            </div>
+          </div>
+          <!-- Footer End -->
+        </div>
+        <!-- Content END -->
+      </div>
+    </div>
+
+    <!-- Core Vendors JS -->
+    <script src="assets/js/vendors.min.js"></script>
+
+    <!-- page js -->
+    <script src="assets/js/multiselect-dropdown.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//geodata.solutions/includes/statecity.js"></script>
+    <script src="assets/js/form-validation.js"></script>
+
+    <!-- Core JS -->
+    <script src="assets/js/app.min.js"></script>
+    <script src="js/resume.js"></script>
+  </body>
+</html>
